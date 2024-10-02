@@ -71,8 +71,9 @@ body::-webkit-scrollbar-thumb {
 /* Secciones */
 .section {
     padding: 50px 20px;
-    text-align: center;
+    text-align: left;
     display: none; /* Oculta todas las secciones inicialmente */
+    
 }
 
 .section.active {
