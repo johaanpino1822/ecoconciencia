@@ -7,10 +7,7 @@
 
 /* Estilos generales del body */
 body {
-    background-image: url(./image/pexels-pixabay-433308.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+   background-color: #ffffff;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     --sb-track-color: #232e33;
@@ -78,13 +75,32 @@ body::-webkit-scrollbar-thumb {
 /* Secciones */
 .section {
     padding: 50px 20px;
-    text-align: left;
+    text-align: center;
     display: none; /* Oculta todas las secciones inicialmente */
+ 
+
+    
+
+
+}
+.section {
+    padding: 60px 20px;
+    display: none; /* Ocultar secciones por defecto */
+}
+.active {
+    display: block; /* Mostrar sección activa */
+}
+p{
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
     
 }
 
 .section.active {
     display: block; /* Solo muestra la sección activa */
+    
 }
 
 /* Footer */
