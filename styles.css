@@ -14,14 +14,21 @@ body {
     --sb-thumb-color: #25c500;
     --sb-size: 14px;
 }
+.image{
+    max-width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    max-height: 100px; /* Limita la altura máxima de las imágenes */
+    object-fit: cover; /* Cubre el área del contenedor sin deformarse */
+    border-radius: 100px;
+    
+}
 
 .carousel-item img {
-    width: 1500px;  /* Puedes ajustar esto a un valor fijo si lo prefieres, como 600px */
-    height: 500px; /* Puedes ajustar esto a un valor fijo si lo prefieres, como 400px */
-    max-width: 100%; /* Asegúrate de que las imágenes no se desborden */
-    max-height: 400px; /* Establece una altura máxima para las imágenes */
-    object-fit: cover; 
-}    
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    max-height: 400px; /* Limita la altura máxima de las imágenes */
+    object-fit: cover; /* Cubre el área del contenedor sin deformarse */
+}  
 body::-webkit-scrollbar {
     width: var(--sb-size);
 }
@@ -44,7 +51,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Navbar */
 .navbar {
-    background-color: #1e3a8a; /* Azul oscuro */
+    background-color: #1e8a4f; /* Azul oscuro */
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -82,7 +89,9 @@ body::-webkit-scrollbar-thumb {
     
 
 
+
 }
+
 .section {
     padding: 60px 20px;
     display: none; /* Ocultar secciones por defecto */

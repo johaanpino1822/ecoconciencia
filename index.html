@@ -6,8 +6,25 @@
     <meta name="description" content="Proyecto Web sobre energías renovables y sostenibilidad">
     <title>Proyecto Web - Ecoconciencia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" 
+    rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi Página Web</title>
+        
+        <!-- Favicon general -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <!-- Favicon para dispositivos Apple -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./image/logo.png">
+        <!-- Favicon para otros tamaños -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./image/logo.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./image/logo.png">
+    
+        <!-- Bootstrap CSS (si estás usando Bootstrap) -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
     
     <style>
         :root {
@@ -21,8 +38,9 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-custom-green py-3"> 
-        <div class="container">
+        <div class="container"> <img src="./image/logo.png " alt="" class="image">
             <a class="navbar-brand fw-bold" href="#section1">Ecoconciencia</a>
+           
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -66,8 +84,9 @@
     <main>
         <section id="section1" class="section active">
             <div class="container py-5">
-                <h1 class="display-4 fw-bold text-center mb-4">Bienvenidos a Energías Renovables</h1>
+                <h1 class="display-4 fw-bold text-center mb-4">Bienvenidos a Ecoconciencia</h1>
                 <p class="lead text-center mb-5">Descubre el futuro sostenible de la energía.</p>
+                
             </div>
             <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -80,14 +99,14 @@
                         <img src="./image/pexels-pixabay-433308.jpg" alt="Paneles solares en un campo" class="d-block w-100" width="1600" height="900" loading="lazy">
                         <div class="container">
                             <div class="carousel-caption text-start">
-                                <h2 class="display-5 fw-bold">Energía Solar</h2>
+                                <h2 class="display-1 fw-bold">Energía Solar</h2>
                                 <p class="lead">Aprovechando el poder del sol para un futuro más limpio.</p>
                                 <p><a class="btn btn-lg btn-primary" href="#section2">Saber más</a></p>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="./image/pexels-kervin-3976320.jpg" alt="Turbinas eólicas en un campo" class="d-block w-100" width="1600" height="900" loading="lazy">
+                        <img src="./image/pinwheels-6535595_1920.jpg" alt="Turbinas eólicas en un campo" class="d-block w-100" width="1600" height="900" loading="lazy">
                         <div class="container">
                             <div class="carousel-caption">
                                 <h2 class="display-5 fw-bold">Energía Eólica</h2>
@@ -116,6 +135,7 @@
                     <span class="visually-hidden">Siguiente</span>
                 </button>
             </div>
+            
 
             <section class="container my-5">
                 <div class="row justify-content-center">
@@ -124,7 +144,7 @@
                             <div class="card-body p-5">
                                 <h2 class="card-title display-4 mb-4 text-primary fw-bold">¿Qué son las energías renovables?</h2>
                                 <p class="lead mb-4">
-                                    Las energías renovables son fuentes de energía que se regeneran naturalmente con el tiempo y no se agotan. Son la parte más importante de la transición hacia un sistema energético que abandone los combustibles fósiles, contrarrestando así el calentamiento global. Y son <strong class="text-success">energías limpias</strong> que protegen la salud humana y el medioambiente.
+                                    Las energías renovables provienen de fuentes que se restauran de manera natural con el paso del tiempo y no se agotan. Juegan un papel clave en la transición hacia un modelo energético más sostenible, que reduzca la dependencia de los combustibles fósiles, ayudando a mitigar el cambio climático. Además, estas<strong class="text-success"> energías son limpias</strong>, lo que las hace beneficiosas tanto para el medioambiente como para la salud humana.
                                 </p>
                                 <h3 class="h4 mb-3 text-secondary">Las principales fuentes de energía renovable son:</h3>
                                 <ul class="list-group list-group-flush">
@@ -158,34 +178,152 @@
                     </div>
                 </div>
             </section>
+            <!-- Nueva sección: Características de las Energías Renovables -->
+            <section class="py-5 bg-light">
+                <div class="container">
+                    <h2 class="text-center mb-5">Características de las Energías Renovables</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-arrow-repeat text-primary fs-1 mb-3"></i>
+                                    <h3 class="card-title h5">Inagotable</h3>
+                                    <p class="card-text">Las fuentes renovables siempre están disponibles en la naturaleza.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-globe text-success fs-1 mb-3"></i>
+                                    <h3 class="card-title h5">Respetuosa con el medio ambiente</h3>
+                                    <p class="card-text">Producir energía de fuentes renovables reduce drásticamente las emisiones de CO2 a la atmósfera.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-gear-wide-connected text-info fs-1 mb-3"></i>
+                                    <h3 class="card-title h5">Versátil</h3>
+                                    <p class="card-text">Gracias a las diferentes tecnologías, es posible producir energía renovable en prácticamente todos los rincones del mundo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-graph-up-arrow text-warning fs-1 mb-3"></i>
+                                    <h3 class="card-title h5">En constante evolución</h3>
+                                    <p class="card-text">La innovación tecnológica permite que la producción de energía renovable sea cada vez más eficiente.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-piggy-bank text-danger fs-1 mb-3"></i>
+                                    <h3 class="card-title h5">Barata</h3>
+                                    <p class="card-text">La producción de energía renovable a gran escala es cada vez más rentable.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-people text-secondary fs-1 mb-3"></i>
+                                    <h3 class="card-title h5">Nuevos empleos</h3>
+                                    <p class="card-text">La economía verde requiere y requerirá cada vez más empleos en el futuro, con efectos positivos en el empleo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
     
         <section id="section2" class="section bg-light py-5">
             <div class="container">
                 <div class="p-5 mb-4 bg-white rounded-3 shadow-sm">
-                    <div class="container-fluid py-5">
-                        <h2 class="display-5 fw-bold text-primary mb-4">Energía Solar</h2>
-                        <p class="col-md-8 fs-4">La energía solar es una energía renovable, obtenida a partir del aprovechamiento de la radiación electromagnética procedente del Sol. La radiación solar que alcanza la Tierra ha sido aprovechada por el ser humano desde la antigüedad, mediante diferentes tecnologías que han ido evolucionando.</p>
-                    </div>
+                   <!-- Sección de Sostenibilidad -->
+    <!-- Sección de Sostenibilidad -->
+    <section id="sostenibilidad" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2 class="display-4">Sostenibilidad y Energía Renovable</h2>
+                    <p class="lead">Aprende cómo la transición a energías limpias puede salvar nuestro planeta y generar un impacto positivo en la sociedad.</p>
                 </div>
-                <div class="row align-items-md-stretch">
-                    <div class="col-md-6">
-                        <div class="h-100 p-5 text-white bg-primary rounded-3 shadow-sm">
-                            <h3 class="fw-bold">Ventajas de la Energía Solar</h3>
-                            <p>La energía solar es limpia, inagotable y cada vez más eficiente. Además, reduce la dependencia de combustibles fósiles y disminuye las emisiones de gases de efecto invernadero.</p>
-                            <button class="btn btn-outline-light" type="button">Leer más</button>
+            </div>
+            <div class="row">
+                <!-- ¿Qué es la Energía Renovable? -->
+                <div class="col-md-6">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="bi bi-sun-fill text-warning"></i> ¿Qué es la Energía Renovable?</h4>
+                            <p class="card-text">La energía renovable proviene de fuentes naturales que se regeneran de manera constante, como el sol, el viento y el agua. A diferencia de los combustibles fósiles, no emiten gases de efecto invernadero y su uso reduce la contaminación.</p>
+                            <p class="card-text"><strong>Beneficio:</strong> Contribuye a la reducción del calentamiento global y promueve un entorno más saludable.</p>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="h-100 p-5 bg-white border rounded-3 shadow-sm">
-                            <h3 class="fw-bold text-secondary">Implementación</h3>
-                            <p>La implementación de sistemas de energía solar, tanto a pequeña como a gran escala, está creciendo rápidamente en todo el mundo, contribuyendo significativamente a la transición hacia energías limpias.</p>
-                            <button class="btn btn-outline-secondary" type="button">Explorar proyectos</button>
+                </div>
+                <!-- Transición Energética Justa -->
+                <div class="col-md-6">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="bi bi-people-fill text-primary"></i> ¿Qué es una Transición Energética Justa?</h4>
+                            <p class="card-text">La transición energética justa es un enfoque que busca movernos hacia un sistema energético más limpio sin dejar atrás a las comunidades vulnerables. Se enfoca en crear empleos verdes y garantizar que todos tengan acceso a energía limpia y asequible.</p>
+                            <p class="card-text"><strong>Importancia:</strong> Asegura que el cambio hacia energías renovables beneficie a todos, sin exclusión.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="row">
+                <!-- ¿Cómo la Tecnología Ayuda a la Sostenibilidad? -->
+                <div class="col-md-6">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="bi bi-lightbulb-fill text-success"></i> ¿Cómo la Tecnología Ayuda a la Sostenibilidad?</h4>
+                            <p class="card-text">Las innovaciones tecnológicas están mejorando la eficiencia de las energías renovables. Los avances en la energía solar, las baterías y las redes inteligentes permiten generar, almacenar y distribuir energía de manera más eficiente.</p>
+                            <p class="card-text"><strong>Dato interesante:</strong> Hoy en día, la energía solar y eólica son más baratas que el carbón en muchas partes del mundo.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Reducción de la Huella de Carbono -->
+                <div class="col-md-6">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="bi bi-leaf-fill text-success"></i> Reducción de la Huella de Carbono</h4>
+                            <p class="card-text">La huella de carbono es la cantidad de emisiones de gases de efecto invernadero que producimos. Utilizando energías renovables y reduciendo el consumo de combustibles fósiles, podemos disminuir significativamente nuestra huella de carbono.</p>
+                            <p class="card-text"><strong>Consejo:</strong> Optar por energías limpias y mejorar la eficiencia energética en el hogar puede reducir la huella personal hasta un 50%.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Impacto en la Comunidad -->
+                <div class="col-md-6">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="bi bi-house-heart-fill text-danger"></i> Impacto de la Energía Renovable en la Comunidad</h4>
+                            <p class="card-text">Las energías renovables no solo protegen el medio ambiente, sino que también ofrecen oportunidades económicas para las comunidades locales. La creación de empleos verdes y el acceso a energía limpia mejoran la calidad de vida.</p>
+                            <p class="card-text"><strong>Ejemplo:</strong> Las granjas solares comunitarias permiten que los residentes accedan a energía renovable sin necesidad de instalar paneles solares en sus hogares.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Economía Circular -->
+                <div class="col-md-6">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="bi bi-recycle text-info"></i> ¿Qué es la Economía Circular?</h4>
+                            <p class="card-text">La economía circular se basa en reducir, reutilizar y reciclar recursos. En el sector energético, esto significa diseñar tecnologías y sistemas que minimicen el desperdicio y utilicen los recursos de manera más eficiente.</p>
+                            <p class="card-text"><strong>Ejemplo:</strong> La energía generada a partir de residuos es una forma innovadora de convertir desechos en electricidad útil.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
 
         <section id="section3" class="section py-5">
             <div class="container">
@@ -298,7 +436,7 @@
                 </div>
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                <p class="text-white-50">&copy; 2024 Energías Renovables, Inc. Todos los derechos reservados.</p>
+                <p class="text-white-50">&copy; 2024 Ecoconciencia, Inc. Todos los derechos reservados.</p>
                 <ul class="list-unstyled d-flex">
                     <li class="ms-3"><a class="link-light" href="#" aria-label="Twitter"><i class="bi bi-twitter fs-5"></i></a></li>
                     <li class="ms-3"><a class="link-light" href="#" aria-label="Instagram"><i class="bi bi-instagram fs-5"></i></a></li>
