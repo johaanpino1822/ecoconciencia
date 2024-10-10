@@ -26,6 +26,7 @@ body {
     background-color: #034405; /* Color personalizado */
     color: white; /* Color del texto */
 }
+    
 
 .carousel-item img {
     width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
@@ -55,7 +56,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Navbar */
 .navbar {
-    background-color: #1e8a4f; 
+    background-color: #034405; 
     padding: 1rem;
     display: flex;
     justify-content: space-between;
