@@ -22,6 +22,10 @@ body {
     border-radius: 100px;
     
 }
+.custom-bg {
+    background-color: #034405; /* Color personalizado */
+    color: white; /* Color del texto */
+}
 
 .carousel-item img {
     width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
@@ -51,7 +55,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Navbar */
 .navbar {
-    background-color: #1e8a4f; /* Azul oscuro */
+    background-color: #1e8a4f; 
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -72,11 +76,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navbar .nav-link:hover {
-    color: #19191a; /* Gris claro */
+    color: #19191a; 
 }
 
 .navbar .nav-link.active {
-    color: #60a5fa; /* Azul claro para el enlace activo */
+    color: #60a5fa; 
 }
 
 /* Secciones */
@@ -119,3 +123,62 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+.section-title {
+    color: #0d6efd;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bg-light {
+    background-color: #f9fafb !important;
+}
+
+.bg-custom {
+    background-color: #0d6efd;
+    color: white;
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+}
+
+.bg-custom h2 {
+    font-size: 3rem;
+}
+
+.btn-custom {
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 50px;
+}
+
+.btn-custom:hover {
+    background-color: #0b5ed7;
+    color: #fff;
+}
+
+/* Colores personalizados para los íconos */
+.icon-solar { color: #ffc107; } /* Sol amarillo */
+.icon-people { color: #28a745; } /* Verde para transición justa */
+.icon-tech { color: #17a2b8; } /* Azul claro para tecnología */
+.icon-carbon { color: #6f42c1; } /* Púrpura para huella de carbono */
+.icon-community { color: #e83e8c; } /* Rosa para comunidad */
+.icon-recycle { color: #20c997; } /* Verde claro para reciclaje */
