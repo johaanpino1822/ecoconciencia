@@ -7,7 +7,7 @@
 
 /* Estilos generales del body */
 body {
-   background-color: #ffffff;
+   background-color: #eee7e7;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     --sb-track-color: #232e33;
@@ -21,6 +21,23 @@ body {
     object-fit: cover; /* Cubre el área del contenedor sin deformarse */
     border-radius: 100px;
     
+}
+h2, h4 {
+    font-family: 'Poppins', sans-serif;
+}
+p, .btn {
+    font-family: 'Lato', sans-serif;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+.card-icon {
+    font-size: 2.5rem;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #007bff;
+    color: white;
 }
 .custom-bg {
     background-color: #034405; /* Color personalizado */
@@ -56,11 +73,12 @@ body::-webkit-scrollbar-thumb {
 
 /* Navbar */
 .navbar {
-    background-color: #034405; 
+    background-color:#212529; 
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1000;
 }
 
 .navbar .navbar-nav {
@@ -113,6 +131,7 @@ body::-webkit-scrollbar-thumb {
     padding: 50px 20px;
     text-align: center;
     display: none; /* Oculta todas las secciones inicialmente */
+   
  
 
     
@@ -208,3 +227,31 @@ footer {
 .icon-carbon { color: #6f42c1; } /* Púrpura para huella de carbono */
 .icon-community { color: #e83e8c; } /* Rosa para comunidad */
 .icon-recycle { color: #20c997; } /* Verde claro para reciclaje */
+
+
+#boton{
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    background-color: #28a745;
+    margin-top: 0px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    border-radius: 0.2cm;
+} 
+
+#ingreso{
+    margin-bottom: 8px;
+    font-size: x-large;
+}
+
+#imput{
+
+    width: 100px;
+    height: 40px;
+    font-size: large;
+    border-radius: 10px;
+
+
+}
