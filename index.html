@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto Web sobre energías renovables y sostenibilidad">
+    <title>Proyecto Web - Ecoconciencia</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon general -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Favicon para dispositivos Apple -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./image/logo.png">
+    <!-- Favicon para otros tamaños -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./image/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./image/logo.png">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #28a745;
+            --secondary-color: #6c757d;
+        }
+        .bg-custom-green {
+            background-color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark py-3"> 
+        <div class="container"> <img src="./image/logo.png" alt="" class="image">
+            <a class="navbar-brand fw-bold" href="#section1">Ecoconciencia</a>
+           
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" data-target="section1">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section2" data-target="section2">Medición</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section3" data-target="section3">Soluciones</a>
+                    </li>
+                   
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Más
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#section5" data-target="section5">Energía Solar</a></li>
+                            <li><a class="dropdown-item" href="#">Energía Eólica</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Contacto</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+        <section id="section1" class="section active">
+            <div class="container-fluid py-5 custom-bg my-5 mt-1 mb-5">
+                <h1 class="display-4 fw-bold text-center mb-4">Bienvenidos a Ecoconciencia</h1>
+                <p class="lead text-center mb-5">Descubre el futuro sostenible de la energía.</p>
+            </div>
+            <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./image/pexels-pixabay-433308.jpg" alt="Paneles solares en un campo" class="d-block w-100" width="1600" height="900" loading="lazy">
+                        <div class="container">
+                            <div class="carousel-caption text-start">
+                                <h2 class="display-1 fw-bold">Energía Solar</h2>
+                                <p class="lead">Aprovechando el poder del sol para un futuro más limpio.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#section2">Saber más</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./image/pinwheels-6535595_1920.jpg" alt="Turbinas eólicas en un campo" class="d-block w-100" width="1600" height="900" loading="lazy">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h2 class="display-5 fw-bold">Energía Eólica</h2>
+                                <p class="lead">Harnessing the power of wind for sustainable energy.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Explorar</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./image/central-biomasa.jpg" alt="Central de biomasa" class="d-block w-100" width="1600" height="900" loading="lazy">
+                        <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h2 class="display-5 fw-bold">Energía de Biomasa</h2>
+                                <p class="lead">Convirtiendo residuos orgánicos en energía limpia.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Descubrir más</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+            
+            <section class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="card shadow-lg border-0">
+                            <div class="card-body p-5">
+                                <h2 class="card-title display-4 mb-4 text-primary fw-bold">¿Qué son las energías renovables?</h2>
+                                <p class="lead mb-4">
+                                    Las energías renovables provienen de fuentes que se restauran de manera natural con el paso del tiempo y no se agotan. Juegan un papel clave en la transición hacia un modelo energético más sostenible, que reduzca la dependencia de los combustibles fósiles, ayudando a mitigar el cambio climático. Además, estas<strong class="text-success"> energías son limpias</strong>, lo que las hace beneficiosas tanto para el medioambiente como para la salud humana.
+                                </p>
+                                <h3 class="h4 mb-3 text-secondary">Las principales fuentes de energía renovable son:</h3>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-light d-flex align-items-center py-3">
+                                        <i class="bi bi-sun-fill text-warning me-3 fs-4"></i>
+                                        Energía solar
+                                    </li>
+                                    <li class="list-group-item bg-light d-flex align-items-center py-3">
+                                        <i class="bi bi-wind text-primary me-3 fs-4"></i>
+                                        Energía eólica
+                                    </li>
+                                    <li class="list-group-item bg-light d-flex align-items-center py-3">
+                                        <i class="bi bi-water text-info me-3 fs-4"></i>
+                                        Hidroeléctrica
+                                    </li>
+                                    <li class="list-group-item bg-light d-flex align-items-center py-3">
+                                        <i class="bi bi-thermometer-half text-danger me-3 fs-4"></i>
+                                        Energía geotérmica
+                                    </li>
+                                    <li class="list-group-item bg-light d-flex align-items-center py-3">
+                                        <i class="bi bi-tree-fill text-success me-3 fs-4"></i>
+                                        Energía de la biomasa
+                                    </li>
+                                    <li class="list-group-item bg-light d-flex align-items-center py-3">
+                                        <i class="bi bi-water text-primary me-3 fs-4"></i>
+                                        Energía marina
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-5 bg-light">
+                <div class="container">
+                    <h2 class="text-center mb-5">Características de las Energías Renovables</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-arrow-repeat text-primary fs-1 mb-3"></i>
+                                    <h3 class="card-title h5">Inagotable</h3>
+                                    <p class="card-text">Las fuentes renovables siempre están disponibles en la naturaleza.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-globe text-success fs-1 mb-3"></i>
+                                    <h3 class="card-title h5">Respetuosa con el medio ambiente</h3>
+                                    <p class="card-text">Producir energía de fuentes renovables reduce drásticamente las emisiones de CO2 a la atmósfera.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-gear-wide-connected text-info fs-1 mb-3"></i>
+                                    <h3 class="card-title h5">Versátil</h3>
+                                    <p class="card-text">Gracias a las diferentes tecnologías, es posible producir energía renovable en prácticamente todos los rincones del mundo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-graph-up-arrow text-warning fs-1 mb-3"></i>
+                                    <h3 class="card-title h5">En constante evolución</h3>
+                                    <p class="card-text">La innovación tecnológica permite que la producción de energía renovable sea cada vez más eficiente.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-piggy-bank text-danger fs-1 mb-3"></i>
+                                    <h3 class="card-title h5">Barata</h3>
+                                    <p class="card-text">La producción de energía renovable a gran escala es cada vez más rentable.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-people text-secondary fs-1 mb-3"></i>
+                                    <h3 class="card-title h5">Nuevos empleos</h3>
+                                    <p class="card-text">La economía verde requiere y requerirá cada vez más empleos en el futuro, con efectos positivos en el empleo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row text-center mb-4">
+                        <div class="col">
+                            <h2 class="section-title display-5 mt-5">Explora las Claves de la Sostenibilidad</h2>
+                            <p class="lead">Comprende cómo las energías renovables y la sostenibilidad afectan
+                                nuestro día a día y el futuro de la humanidad.</p>
+                        </div>
+                    </div>
+            
+                    <!-- Animaciones de fondo con imagen -->
+                    <div class="row">
+                        <!-- ¿Qué es la Energía Renovable? -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="card-icon icon-solar mb-3">
+                                        <i class="bi bi-sun-fill" style="font-size: 2.5rem; color: orange;"></i>
+                                    </div>
+                                    <h4 class="card-title">¿Qué es la Energía Renovable?</h4>
+                                    <p class="card-text">La energía renovable proviene de fuentes naturales que se regeneran de manera constante, como el sol, el viento y el agua.</p>
+                                    <a href="#" class="btn btn-outline-primary">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Transición Energética Justa -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="card-icon icon-people mb-3">
+                                        <i class="bi bi-people-fill" style="font-size: 2.5rem; color: #4caf50;"></i>
+                                    </div>
+                                    <h4 class="card-title">Transición Energética Justa</h4>
+                                    <p class="card-text">Un enfoque que busca avanzar hacia un sistema energético más limpio sin dejar atrás a las comunidades más vulnerables.</p>
+                                    <a href="#" class="btn btn-outline-primary">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Tecnología y Sostenibilidad -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="card-icon icon-tech mb-3">
+                                        <i class="bi bi-lightbulb-fill" style="font-size: 2.5rem; color: #f0ad4e;"></i>
+                                    </div>
+                                    <h4 class="card-title">Tecnología y Sostenibilidad</h4>
+                                    <p class="card-text">La tecnología está mejorando la eficiencia de las energías renovables. Innovaciones como las baterías y las redes inteligentes impulsan este cambio.</p>
+                                    <a href="#" class="btn btn-outline-primary">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="row">
+                        <!-- Huella de Carbono -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="card-icon icon-carbon mb-3">
+                                        <i class="bi bi-leaf-fill" style="font-size: 2.5rem; color: green;"></i>
+                                    </div>
+                                    <h4 class="card-title">Reducción de la Huella de Carbono</h4>
+                                    <p class="card-text">Utilizando energías renovables y reduciendo el uso de combustibles fósiles, podemos reducir significativamente nuestra huella de carbono.</p>
+                                    <a href="#" class="btn btn-outline-primary">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Impacto en la Comunidad -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="card-icon icon-community mb-3">
+                                        <i class="bi bi-house-heart-fill" style="font-size: 2.5rem; color: #e74c3c;"></i>
+                                    </div>
+                                    <h4 class="card-title">Impacto en la Comunidad</h4>
+                                    <p class="card-text">Las energías renovables ofrecen oportunidades económicas para las comunidades, mejorando la calidad de vida a través de empleos verdes.</p>
+                                    <a href="#" class="btn btn-outline-primary">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Economía Circular -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="card-icon icon-recycle mb-3">
+                                        <i class="bi bi-recycle" style="font-size: 2.5rem; color: #3498db;"></i>
+                                    </div>
+                                    <h4 class="card-title">Economía Circular</h4>
+                                    <p class="card-text">La economía circular reduce, reutiliza y recicla recursos, minimizando el desperdicio y maximizando el uso eficiente de los recursos energéticos.</p>
+                                    <a href="#" class="btn btn-outline-primary">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Sección de testimonios -->
+                    <div class="row text-center mt-5">
+                        <div class="col">
+                            <h2 class="section-title">Testimonios</h2>
+                            <p class="lead">Escucha lo que los expertos tienen que decir sobre la sostenibilidad</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Testimonio 1 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <blockquote class="blockquote text-center">
+                                        <p>"La energía renovable no es solo el futuro, es el presente que necesitamos adoptar cuanto antes."</p>
+                                        <footer class="blockquote-footer">Juan Pérez, <cite title="Source Title">Experto en Energía</cite></footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Testimonio 2 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <blockquote class="blockquote text-center">
+                                        <p>"Invertir en sostenibilidad es invertir en un mundo mejor para nuestros hijos."</p>
+                                        <footer class="blockquote-footer">María López, <cite title="Source Title">CEO de GreenTech</cite></footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Testimonio 3 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <blockquote class="blockquote text-center">
+                                        <p>"Las energías limpias son la única solución para combatir el cambio climático de forma eficaz."</p>
+                                        <footer class="blockquote-footer">Carlos Rodríguez, <cite title="Source Title">Investigador Ambiental</cite></footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+
+
+                <div class="container">
+                    <h2 class="display-4 fw-bold text-center mb-5 mt-4">Contacto</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="nombre">
+                                <span class="input-group-text" id="basic-addon1"> Johaan Monsalve</span><br>
+                                <span class="input-group-text" id="basic-addon1"> Maria Pula Álvarez Urrego</span><br>
+                                <span class="input-group-text" id="basic-addon1"> Mónica Caro</span><br>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="correo">
+                                <input type="text" class="form-control mb-2" placeholder="Johann...@" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <input type="text" class="form-control mb-2" placeholder="mariapaula.a1997@gmail.com" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <input type="text" class="form-control mb-2" placeholder="Mónica...@" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group">
+                                <span class="input-group-text">Mensaje</span>
+                                <textarea class="form-control" aria-label="Mensaje" placeholder="Ingrese un mensaje"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        
+
+        <section id="section2" class="section py-5">
+            <div class="container">
+                <h2 class="display-4 fw-bold text-center mb-5">Medición</h2>
+                <div class="row">
+                    <div class="col-10 ">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h4 mb-3">Gasto Energético</h3>
+                                <p class="card-text">Calcular el gasto del usuario en energía eléctrica versus energía renovable.</p>
+                                <div id="T">
+                                    <h2>Calcular</h2>
+                                    <p id="ingreso">
+                                        Ingrese el consumo total de Energía en kwt/h<br>
+                                        <input type="number" id="Ninput" placeholder="Ingrese solo Números">
+                                    </p>
+                                    <button onclick="calcular()" id="boton">Calcular</button>
+                                    <p id="resultado1"></p>
+                                    <p id="resultado2"></p>
+                                    <p id="resultado3"></p>
+                                    <p id="resultado4"></p>
+                                    <p id="resultado5"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 mt-5">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h4  mb-3">Estadísticas Globales</h3>
+                                <p class="card-text">Estadísticas sobre la demanda global de combustibles fósiles y la energía renovable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+        </section>
+
+        <section id="section3" class="section bg-light py-5">
+            <div class="container">
+                <h2 class="display-4 fw-bold text-center mb-5">Soluciones</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h4 mb-3">Energías Renovables</h3>
+                                <p class="card-text">Tipos de energías renovables y su impacto en el medio ambiente.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h4  mb-3">ODS y Acuerdo de París</h3>
+                                <p class="card-text">Objetivos de Desarrollo Sostenible y compromisos internacionales.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h4 mb-3">Conciencia del Usuario</h3>
+                                <p class="card-text">Tips para el ahorro de energía y acciones individuales.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-muted text-center mt-4">Fuentes: [Agregar fuentes aquí]</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5 class="fw-bold mb-3">Secciones</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50 hover-white">Inicio</a></li>
+                        <li class="nav-item mb-2"><a href="#section1" class="nav-link p-0 text-white-50 hover-white">Sostenibilidad</a></li>
+                        <li class="nav-item mb-2"><a href="#section2" class="nav-link p-0 text-white-50 hover-white">Energía Solar</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50 hover-white">Energía Eólica</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50 hover-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5 class="fw-bold mb-3">Recursos</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50 hover-white">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50 hover-white">Publicaciones</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50 hover-white">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50 hover-white">Sobre nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5 class="fw-bold mb-3">Suscríbete a nuestro boletín</h5>
+                        <p>Recibe mensualmente las últimas noticias sobre energías renovables.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Dirección de correo electrónico</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Dirección de correo electrónico">
+                            <button class="btn btn-primary" type="button">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p class="text-white-50">&copy; 2024 Ecoconciencia, Inc. Todos los derechos reservados.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-light" href="#" aria-label="Twitter"><i class="bi bi-twitter fs-5"></i></a></li>
+                    <li class="ms-3"><a class="link-light" href="#" aria-label="Instagram"><i class="bi bi-instagram fs-5"></i></a></li>
+                    <li class="ms-3"><a class="link-light" href="#" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="./script.js"></script>
+</body>
+</html>
