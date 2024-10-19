@@ -15,11 +15,14 @@ body {
     --sb-size: 14px;
 }
 .image{
-    max-width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
-    height: auto; /* Mantiene las proporciones de la imagen */
-    max-height: 100px; /* Limita la altura máxima de las imágenes */
-    object-fit: cover; /* Cubre el área del contenedor sin deformarse */
+    max-width: 50%; 
+    height: auto; 
+    max-height: 100px; 
+    object-fit: cover;
     border-radius: 100px;
+    margin-right: 50px; 
+    margin-left: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     
 }
 h2, h4 {
@@ -255,3 +258,15 @@ footer {
 
 
 }
+body {
+    padding-top: 56px; /* Evitar que la barra cubra el contenido */
+  }
+  
+  .header-section {
+    margin-top: 50px; /* Ajusta según lo que desees */
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: #033b03;
+    color: white;
+    padding: 40px 0;
+  }

@@ -31,7 +31,7 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark py-3"> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top "> 
         <div class="container"> <img src="./image/logo.png" alt="" class="image">
             <a class="navbar-brand fw-bold" href="#section1">Ecoconciencia</a>
            
@@ -72,7 +72,7 @@
     
     <main>
         <section id="section1" class="section active">
-            <div class="container-fluid py-5 custom-bg my-5 mt-1 mb-5">
+            <div class="header-section"">
                 <h1 class="display-4 fw-bold text-center mb-4">Bienvenidos a Ecoconciencia</h1>
                 <p class="lead text-center mb-5">Descubre el futuro sostenible de la energía.</p>
             </div>
@@ -406,42 +406,44 @@
 
         <section id="section2" class="section py-5">
             <div class="container">
-                <h2 class="display-4 fw-bold text-center mb-5">Medición</h2>
-                <div class="row">
-                    <div class="col-10 ">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body">
-                                <h3 class="card-title h4 mb-3">Gasto Energético</h3>
-                                <p class="card-text">Calcular el gasto del usuario en energía eléctrica versus energía renovable.</p>
-                                <div id="T">
-                                    <h2>Calcular</h2>
-                                    <p id="ingreso">
-                                        Ingrese el consumo total de Energía en kwt/h<br>
-                                        <input type="number" id="Ninput" placeholder="Ingrese solo Números">
-                                    </p>
-                                    <button onclick="calcular()" id="boton">Calcular</button>
-                                    <p id="resultado1"></p>
-                                    <p id="resultado2"></p>
-                                    <p id="resultado3"></p>
-                                    <p id="resultado4"></p>
-                                    <p id="resultado5"></p>
-                                </div>
-                            </div>
-                        </div>
+              <h2 class="display-4 fw-bold text-center mb-5">Medición</h2>
+              <div class="row">
+                <!-- Primera carta centrada -->
+                <div class="col-10 mx-auto">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                      <h3 class="card-title h4 mb-3">Gasto Energético</h3>
+                      <p class="card-text">Calcular el gasto del usuario en energía eléctrica versus energía renovable.</p>
+                      <div id="T">
+                        <h2>Calcular</h2>
+                        <p id="ingreso">
+                          Ingrese el consumo total de Energía en kwt/h<br>
+                          <input type="number" id="Ninput" placeholder="Ingrese solo Números">
+                        </p>
+                        <button onclick="calcular()" id="boton">Calcular</button>
+                        <p id="resultado1"></p>
+                        <p id="resultado2"></p>
+                        <p id="resultado3"></p>
+                        <p id="resultado4"></p>
+                        <p id="resultado5"></p>
+                      </div>
                     </div>
-                    <div class="col-10 mt-5">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body">
-                                <h3 class="card-title h4  mb-3">Estadísticas Globales</h3>
-                                <p class="card-text">Estadísticas sobre la demanda global de combustibles fósiles y la energía renovable.</p>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-             
+          
+                <!-- Segunda carta centrada con margen superior -->
+                <div class="col-10 mx-auto mt-5">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                      <h3 class="card-title h4 mb-3">Estadísticas Globales</h3>
+                      <p class="card-text">Estadísticas sobre la demanda global de combustibles fósiles y la energía renovable.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
-
+          </section>
+          
         <section id="section3" class="section bg-light py-5">
             <div class="container">
                 <h2 class="display-4 fw-bold text-center mb-5">Soluciones</h2>
