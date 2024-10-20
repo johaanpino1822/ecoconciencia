@@ -15,14 +15,12 @@ body {
     --sb-size: 14px;
 }
 .image{
-    max-width: 50%; 
-    height: auto; 
-    max-height: 100px; 
-    object-fit: cover;
+    max-width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    max-height: 100px; /* Limita la altura máxima de las imágenes */
+    object-fit: cover; /* Cubre el área del contenedor sin deformarse */
     border-radius: 100px;
-    margin-right: 50px; 
-    margin-left: 50px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
     
 }
 h2, h4 {
@@ -245,7 +243,7 @@ footer {
 } 
 
 #ingreso{
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size: x-large;
 }
 
