@@ -231,7 +231,8 @@ footer {
 
 
 #boton{
-    width: 100px;
+    width: 100%;
+    max-width: 300px;
     height: 35px;
     text-align: center;
     background-color: #28a745;
@@ -243,7 +244,7 @@ footer {
 } 
 
 #ingreso{
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-size: x-large;
 }
 
@@ -253,9 +254,46 @@ footer {
     height: 40px;
     font-size: large;
     border-radius: 10px;
-
-
 }
+.contenedor {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contenedorTabla {
+    max-height: 400px; /* Ajusta la altura fija del contenedor */
+    overflow-y: auto;  /* Habilita el scroll vertical si el contenido es mayor */
+    border: 1px solid #ccc; /* Borde opcional alrededor de la tabla */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#datosTabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+th, td {
+    padding: 2px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+thead {
+    background-color: #f4f4f4;
+    position: sticky;
+    top: 0;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+
 body {
     padding-top: 56px; /* Evitar que la barra cubra el contenido */
   }
