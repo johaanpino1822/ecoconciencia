@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def show_charts():
-    return render_template('GraficosP.html')
+    return render_template('index.html')
 
 # Leer el archivo CSV
 df = pd.read_csv('Fuentes_Electricas.csv')           
