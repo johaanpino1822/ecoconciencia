@@ -46,7 +46,7 @@ def index():
     plt.close(fig_area)
 
     # Renderiza la plantilla y envía las imágenes
-    return render_template('index.html')
+    return render_template('template\medicion.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

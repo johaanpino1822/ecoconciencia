@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto Web sobre energías renovables y sostenibilidad">
+    <title>Proyecto Web - Ecoconciencia</title>
+
+    <!-- Favicon general -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Favicon para dispositivos Apple -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../image/logo.png">
+    <!-- Favicon para otros tamaños -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../image/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../image/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/styles.css">
+
+    <!-- Custom styles -->
+    <style>
+        :root {
+            --primary-color: #28a745;
+            --secondary-color: #6c757d;
+        }
+        .bg-custom-green {
+            background-color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+          <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container ">
+            <img src="../image/logo.png" alt="Logo" class="image">
+            <a class="navbar-brand fw-bold" href="#section1">Ecoconciencia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./soluciones.html">Soluciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./medicion.html">Medición</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                </ul>
+                <form class="d-flex" role="search" onsubmit="buscarSeccion(event)">
+                    <input class="form-control me-2" type="search" id="buscarInput" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+<div class="container-fluid mt-5 mb-5">
+    <h2 class="text-center mt-5 mb-4">Contáctanos</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form id="contactForm">
+                <div class="form-group mb-3">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Tu correo electrónico" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Enviar</button>
+            </form>
+            <div id="mensajeExito" class="alert alert-success mt-3 d-none" role="alert">
+                ¡Tu mensaje ha sido enviado con éxito!
+            </div>
+            <div id="mensajeError" class="alert alert-danger mt-3 d-none" role="alert">
+                Ocurrió un error al enviar el mensaje. Inténtalo de nuevo más tarde.
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark text-white">
+    <div class="container-fluid mt-5 mb-5">
+        <div class="row">
+            <div class="col-6 col-md-2 mb-3">
+                <h5 class="fw-bold mb-3">Secciones</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50 hover-white">Inicio</a></li>
+                    <li class="nav-item mb-2"><a href="#sostenibilidad" class="nav-link p-0 text-white-50 hover-white">Sostenibilidad</a></li>
+                    <li class="nav-item mb-2"><a href="#energia-solar" class="nav-link p-0 text-white-50 hover-white">Energía Solar</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50 hover-white">Energía Eólica</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50 hover-white">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-2 mb-3">
+                <h5 class="fw-bold mb-3">Recursos</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50 hover-white">Blog</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50 hover-white">Publicaciones</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50 hover-white">FAQ</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50 hover-white">Sobre nosotros</a></li>
+                </ul>
+            </div>
+            <div class="col-md-5 offset-md-1 mb-3">
+                <form>
+                    <h5 class="fw-bold mb-3">Suscríbete a nuestro boletín</h5>
+                    <p>Recibe mensualmente las últimas noticias sobre energías renovables.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                        <label for="newsletter1" class="visually-hidden">Dirección de correo electrónico</label>
+                        <input id="newsletter1" type="email" class="form-control" placeholder="Dirección de correo electrónico">
+                        <button class="btn btn-primary" type="button">Suscribirse</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p class="text-white-50">&copy; 2024 Ecoconciencia, Inc. Todos los derechos reservados.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-light" href="#" aria-label="Twitter"><i class="bi bi-twitter fs-5"></i></a></li>
+                <li class="ms-3"><a class="link-light" href="#" aria-label="Instagram"><i class="bi bi-instagram fs-5"></i></a></li>
+                <li class="ms-3"><a class="link-light" href="#" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script src="../static/script.js"></script>
+    
+</body>
+</html>
