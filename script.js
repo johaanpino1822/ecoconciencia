@@ -131,3 +131,15 @@ document.addEventListener('DOMContentLoaded', function () {
   // Llamar a filtrarTabla cuando se cambie el select del filtro
   FiltroPais.addEventListener('change', filtrarTabla);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Cargar el contenido de graficosLineas.html al cargar la página
+  fetch('/grafico')
+      .then(response => response.text())
+      .then(data => {
+          // Insertar el contenido en el div con id "grafico"
+          document.getElementById('grafico').innerHTML = data;
+      })
+      .catch(error => console.error('Error al cargar el gráfico:', error));
+});
+
