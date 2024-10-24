@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def show_charts():
-    return render_template('GraficosP.html')
+    return render_template('index.html')
 
 # Leer el archivo CSV
 df = pd.read_csv('Evolucion_Fuentes.csv')
@@ -26,12 +26,12 @@ for fuente in df['Fuentes'].unique():
 
 # Calcular y mostrar la mediana
     mediana = subset['Value'].median()
-    ax.axhline(y=mediana, linestyle='--', alpha=0.6)  # Añadir la línea de mediana en el gráfico
+    ax.axhline(y=mediana, linestyle='--', alpha=0.3)  # Añadir la línea de mediana en el gráfico
     # Añadir el texto de la mediana al lado de la línea
    
     ##Añadir el texto de la mediana con un pequeño desplazamiento vertical para evitar solapamientos
     ax.text(subset['Year'].iloc[-1] + 0.5, mediana , f'Mediana {fuente}: {int(mediana)} GWh', 
-             fontsize=10, verticalalignment='center')
+             fontsize=5, verticalalignment='center')
 
 
 
