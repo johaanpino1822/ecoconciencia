@@ -16,13 +16,7 @@ def indexDos():
 
 @app.route('/medicion.html')
 def medicion():
-    # Leer el archivo CSV que contiene los datos de los países
-    df_paises = pd.read_csv('TuArchivoConPaises.csv')  # Cambia esto por tu archivo CSV
-    paises = df_paises['NombreDelPais'].unique().tolist()  # Cambia 'NombreDelPais' por el nombre real de la columna
-
-    # Enviar los datos a la plantilla
-    return render_template('medicion.html', paises=paises)
-
+    return render_template('medicion.html')
 
 
 

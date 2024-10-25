@@ -75,17 +75,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const FiltroPais = document.getElementById('FiltroPais');
 
   // Fetch para obtener el contenido del archivo CSV
-  fetch('./datosM.csv')
-    .then(response => response.text())
-    .then(data => {
-      // Dividir el texto del CSV en filas (cada línea es una fila)
-      Filas = data.split('\n');
+  fetch('/static/data/datosM.csv')  
+  .then(response => response.text())
+  .then(data => {
+    Filas = data.split('\n');
 
       // Llenar el conjunto de países y cargar el select
       Filas.forEach((row, index) => {
         const cols = row.split(',');
         if (cols.length > 1 && index > 0) {
-          Paises.add(cols[0]); // Asumimos que el país está en la primera columna
+          Paises.add(cols[0]); // Asegúrate de que el índice sea correcto
         }
       });
 
@@ -102,17 +101,13 @@ document.addEventListener('DOMContentLoaded', function () {
   function filtrarTabla() {
     // Obtener el valor seleccionado en el filtro
     const filtro = FiltroPais.value;
-
     // Limpiar el contenido de la tabla
     CuerpoTbla.innerHTML = '';
-
     // Crear un fragmento de documento para insertar filas filtradas
     const fragmento = document.createDocumentFragment();
-
     // Filtrar y mostrar las filas que coinciden con el país seleccionado
     Filas.forEach((row, index) => {
       const cols = row.split(',');
-
       if (cols.length > 1 && cols[0] === filtro) {
         const ft = document.createElement('tr');
         cols.forEach(col => {
@@ -123,28 +118,35 @@ document.addEventListener('DOMContentLoaded', function () {
         fragmento.appendChild(ft);
       }
     });
-
     // Insertar las filas filtradas en el DOM
     CuerpoTbla.appendChild(fragmento);
   }
-
   // Llamar a filtrarTabla cuando se cambie el select del filtro
   FiltroPais.addEventListener('change', filtrarTabla);
 });
 document.addEventListener('DOMContentLoaded', function () {
   const graficasContenido = document.getElementById('grafico');
-  
-  // Asegúrate de que solo se cargue si el contenido no está ya presente
-  if (!graficasContenido.innerHTML.includes('<h3>Gráfico de Barras</h3>')) {
-      fetch('/graficas')
+
+  // Función para cargar las gráficas directamente
+  function cargarGraficas() { 
+      fetch('/medicion.html') // Cambia esto a la ruta que uses para obtener los datos necesarios
           .then(response => response.text())
           .then(data => {
               if (graficasContenido) {
-                  graficasContenido.innerHTML += data;  // Insertar el contenido
+                  graficasContenido.innerHTML = data;  // Cargar contenido
               } else {
                   console.error('El elemento con ID "grafico" no existe en el DOM.');
               }
           })
           .catch(error => console.error('Error cargando las gráficas:', error));
+  }
+
+  // Manejar clics en la navegación de la sección de medición
+  const medicionNav = document.querySelector('a[data-target="medicion"]');
+  if (medicionNav) {
+      medicionNav.addEventListener('click', (e) => {
+          e.preventDefault();
+          cargarGraficas();  // Cargar gráficas cuando se accede a la sección
+      });
   }
 });
