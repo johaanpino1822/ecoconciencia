@@ -7,15 +7,17 @@
     <title>Proyecto Web - Ecoconciencia</title>
 
     <!-- Favicon general -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="../static/image/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../static/image/logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../static/image/logo.png">
+    <link rel="icon" href="{{ url_for('static', filename='image/logo.png') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='image/logo.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='image/logo.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='image/logo.png') }}">
+ 
+ <!-- Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../static/styles.css">
+
 
     <style>
         :root {
@@ -25,9 +27,36 @@
         .bg-custom-green {
             background-color: var(--primary-color);
         }
+        .contenedor-graficas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            justify-items: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .contenedor-graficas img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-         </style>
+    
+    /* Añadir límite de ancho específico para la gráfica de líneas */
+    .contenedor-grafica-lineas {
+        max-width: 100%;
+        overflow-x: auto;
+        padding: 10px;
+    }
+    .contenedor-grafica-lineas img {
+        width: 100%;  /* Ajusta el tamaño de la imagen al contenedor */
+        max-width: 800px; /* Límite de ancho para evitar desbordamiento */
+        height: auto;
+    }
 
+
+
+    </style>
 
 </head>
 
@@ -110,7 +139,7 @@
                                 </table>
                             </div>
                         </div>
-                        <div id="grafico">
+                        <div class="contenedor-graficas">                    
                             <h3>Gráfico de Barras</h3>
                             <img src="{{ url_for('static', filename='fuentes_barras.png') }}" alt="Gráfico de barras">
                             <h3>Gráfico de Torta</h3>
@@ -126,6 +155,5 @@
         </div>
     </div>
     
-    <script src="../static/script.js"></script>
-</body>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </html>

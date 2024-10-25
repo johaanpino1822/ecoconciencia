@@ -16,7 +16,15 @@ def indexDos():
 
 @app.route('/medicion.html')
 def medicion():
-    return render_template('medicion.html')
+    # Leer el archivo CSV que contiene los datos de los países
+    df_paises = pd.read_csv('TuArchivoConPaises.csv')  # Cambia esto por tu archivo CSV
+    paises = df_paises['NombreDelPais'].unique().tolist()  # Cambia 'NombreDelPais' por el nombre real de la columna
+
+    # Enviar los datos a la plantilla
+    return render_template('medicion.html', paises=paises)
+
+
+
 
 @app.route('/contacto.html')
 def contacto():
@@ -75,7 +83,7 @@ colores_personalizados = ['#13f310', '#1032f3', '#641e16', '#f310d4']
 explode = (0.4, 0.2, 0.6, 1.2)
 
 ax.pie(Valores, labels=Fuentes, autopct='%1.1f%%', colors=colores_personalizados, startangle=0.85, explode=explode, pctdistance=0.90, labeldistance=1.07, shadow=True, textprops={'fontsize': 10})
-plt.title('Producción de Energia por fuente renovable (promedio del 2004-2021)', fontsize=14)
+plt.title('Producción de Energia por fuente renovable (2004-2021)', fontsize=12)
 ax.axis('equal')
 
 plt.savefig('static/fuentes_torta.png')
@@ -90,7 +98,7 @@ for fuente in df2['Fuentes'].unique():
     ax.plot(subset['Year'], subset['Value'], label=fuente)
     mediana = subset['Value'].median()
     ax.axhline(y=mediana, linestyle='--', alpha=0.6)
-    ax.text(subset['Year'].iloc[-1] + 0.5, mediana, f'Mediana {fuente}: {int(mediana)} GWh', fontsize=9, verticalalignment='center')
+    ax.text(subset['Year'].iloc[-1] + 0.5, mediana, f'Mediana {fuente}: {int(mediana)} GWh', fontsize=12, verticalalignment='center')
 
   # Leyenda
 ax.legend(loc='upper left', bbox_to_anchor=(1, 1))  # Mover la leyenda fuera del gráfico
@@ -115,7 +123,7 @@ fig3, ax = plt.subplots()
 ax.fill_between(años, valores, color='green', label='Emisiones', alpha=0.4)
 ax.plot(años, valores, color='green', label='Emisiones')
 ax.axhline(y=media_renovable, color='red', linestyle='--', label=f'Media ({media_renovable:.2f})')
-ax.text(años.iloc[-10], media_renovable + std_renovable, f'Desviación estándar: {std_renovable:.2f}', color='blue', fontsize=10, verticalalignment='bottom', horizontalalignment='right')
+ax.text(años.iloc[-10], media_renovable + std_renovable, f'Desviación estándar: {std_renovable:.2f}', color='blue', fontsize=12, verticalalignment='bottom', horizontalalignment='right')
 
 ax.set_title('Emisiones de CO2 por Combustibles Fósiles, Colombia (2000-2022)')
 ax.set_xlabel('Año')
