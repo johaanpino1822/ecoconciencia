@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+"""from flask import Flask, render_template
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -51,10 +51,4 @@ plt.close(fig1)
 
 
 
-
-
-
-
-
-
-
+"""

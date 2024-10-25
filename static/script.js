@@ -132,12 +132,19 @@ document.addEventListener('DOMContentLoaded', function () {
   FiltroPais.addEventListener('change', filtrarTabla);
 });
 document.addEventListener('DOMContentLoaded', function () {
-  fetch('/graficas')  // Llamada a la ruta que genera las gráficas en Flask
-      .then(response => response.text())
-      .then(data => {
-          document.getElementById('graficas-contenido').innerHTML = data;  // Insertar el contenido
-      })
-      .catch(error => console.error('Error cargando las gráficas:', error));
+  const graficasContenido = document.getElementById('grafico');
+  
+  // Asegúrate de que solo se cargue si el contenido no está ya presente
+  if (!graficasContenido.innerHTML.includes('<h3>Gráfico de Barras</h3>')) {
+      fetch('/graficas')
+          .then(response => response.text())
+          .then(data => {
+              if (graficasContenido) {
+                  graficasContenido.innerHTML += data;  // Insertar el contenido
+              } else {
+                  console.error('El elemento con ID "grafico" no existe en el DOM.');
+              }
+          })
+          .catch(error => console.error('Error cargando las gráficas:', error));
+  }
 });
-
-
