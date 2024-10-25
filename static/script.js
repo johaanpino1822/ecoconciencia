@@ -131,15 +131,13 @@ document.addEventListener('DOMContentLoaded', function () {
   // Llamar a filtrarTabla cuando se cambie el select del filtro
   FiltroPais.addEventListener('change', filtrarTabla);
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Cargar el contenido de graficosLineas.html al cargar la página
-  fetch('/grafico')
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('/graficas')  // Llamada a la ruta que genera las gráficas en Flask
       .then(response => response.text())
       .then(data => {
-          // Insertar el contenido en el div con id "grafico"
-          document.getElementById('grafico').innerHTML = data;
+          document.getElementById('graficas-contenido').innerHTML = data;  // Insertar el contenido
       })
-      .catch(error => console.error('Error al cargar el gráfico:', error));
+      .catch(error => console.error('Error cargando las gráficas:', error));
 });
+
 

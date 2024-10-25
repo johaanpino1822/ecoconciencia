@@ -26,12 +26,12 @@ for fuente in df['Fuentes'].unique():
 
 # Calcular y mostrar la mediana
     mediana = subset['Value'].median()
-    ax.axhline(y=mediana, linestyle='--', alpha=0.3)  # Añadir la línea de mediana en el gráfico
+    ax.axhline(y=mediana, linestyle='--', alpha=0.6)  # Añadir la línea de mediana en el gráfico
     # Añadir el texto de la mediana al lado de la línea
    
     ##Añadir el texto de la mediana con un pequeño desplazamiento vertical para evitar solapamientos
     ax.text(subset['Year'].iloc[-1] + 0.5, mediana , f'Mediana {fuente}: {int(mediana)} GWh', 
-             fontsize=5, verticalalignment='center')
+             fontsize=9, verticalalignment='center')
 
 
 
@@ -41,7 +41,7 @@ ax.set_ylim(0, 80000)
 # Añadir etiquetas y título
 plt.xlabel('Años')
 plt.ylabel('(GWh)')
-plt.title('Evolución de fuentes de generación eléctrica,Colombia/2000-2023')
+plt.title('Evolución de las fuentes de generación eléctrica, Colombia 2000-2023')
 
 # Ajustar el formato de los números en el eje y
 ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x/1000)}k GWh'))

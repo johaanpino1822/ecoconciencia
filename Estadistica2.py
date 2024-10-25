@@ -39,10 +39,10 @@ ax.pie(
     pctdistance=0.90,  # Distancia de los porcentajes al centro
     labeldistance=1.07,  # Ajuste de distancia de las etiquetas
     shadow=True,  # Agregar una sombra
-    textprops={'fontsize': 7}  # Ajustar el tamaño del texto de las etiquetas
+    textprops={'fontsize': 10}  # Ajustar el tamaño del texto de las etiquetas
 )
 # Añadir título a la gráfica
-plt.title('Producción de Energia por fuente renovable (prom. 2004-2021)', fontsize=10)
+plt.title('Producción de Energia por fuente renovable (promedio del 2004-2021)', fontsize=14)
 ax.axis('equal')  # Asegura que el gráfico sea circular
 
 plt.savefig('static/fuentes_torta.png')
